@@ -35,15 +35,27 @@
         <div class="left-contact"></div>
         <div class="right-contact">
           <h2>Sign up</h2>
-          <p>First Name :</p>
-          <input type="text" class="field" placeholder="Your First Name" />
-          <p>Last Name :</p>
-          <input type="text" class="field" placeholder="Your Last Name" />
-          <p>Email :</p>
-          <input type="email" class="field" placeholder="Your Email" />
-          <p>Password :</p>
-          <input type="password" class="field" placeholder="Your Password" />
-          <a class="btn-con">Submit</a>
+          <div>
+            <p> Name :</p>
+          <input type="text" class="field" id="name" placeholder="Your First Name" />
+          </div>
+          
+          <div><p>Email :</p>
+            <input type="email" class="field" id="email" placeholder="Your Email" />
+          </div>
+          <div>
+            <p>Password :</p>
+          <input type="password" class="field" id="msg" placeholder="Your Password" />
+          </div>
+          
+          
+          <div class="button">
+            <a id="send" onclick="message()">Send</a>
+        </div>
+        <div class="message">
+            <div class="success" id="success">Your Message Successfully Sent!</div>
+            <div class="danger" id="danger">Feilds Can't be Empty!</div>
+        </div>
         </div>
       </div>
     </div>
@@ -69,12 +81,44 @@
             <a href="#"><i class="fa fa-linkedin-square"></i></a>
           </li>
         </ul>
+        
       </div>
+
       <div class="footer-bottom">
         <p>copyright &copy;2020 Fashion Hub. designed by <span>Hanane</span></p>
       </div>
     </footer>
+
+
+    
     <script>
+      function message(){
+    var Name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var msg = document.getElementById('msg');
+    const success = document.getElementById('success');
+    const danger = document.getElementById('danger');
+
+    if(Name.value === '' || email.value === '' || msg.value === ''){
+        danger.style.display = 'block';
+    }
+    else{
+        setTimeout(() => {
+            Name.value = '';
+            email.value = '';
+            msg.value = '';
+        }, 2000);
+
+        success.style.display = 'block';
+    }
+
+
+    setTimeout(() => {
+        danger.style.display = 'none';
+        success.style.display = 'none';
+    }, 4000);
+
+}
       let btn = document.querySelector("button");
       let nav = document.querySelector("nav");
       btn.addEventListener("click", function () {

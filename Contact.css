@@ -84,17 +84,7 @@ textarea{
 	min-height: 150px;
 }
 
-.btn{
-	/* width: 100%;
-	padding: 0.5rem 1rem; */
-	background-color: #2ecc71;
-	color: #000000;
-	/* font-size: 1.1rem;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	transition: .3s; */
-}
+
 .right-contact textarea{
     margin-top: 40px;
     margin-left: 2px;
@@ -118,6 +108,59 @@ textarea{
     background-color: #fff;
 }
 
+
+
+
+
+
+
+
+
+.button{
+    width: 50%;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.button button{
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #f187c6;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+	align-items: center;
+}
+
+.message{
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+.message .success{
+    font-size: 20px;
+    color: green;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.message .danger{
+    font-size: 20px;
+    color: red;
+    position: absolute;
+	
+	text-align: center;
+    transition: .3s;
+    animation: buttons .3s linear;
+    display: none;
+}
+
+
+
 @media screen and (max-width: 880px){
 	.contact-box{
 		grid-template-columns: 1fr;
@@ -126,3 +169,14 @@ textarea{
 		height: 200px;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
